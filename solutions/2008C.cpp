@@ -5,18 +5,26 @@
 #include <cmath>
 #include <set>
 #include <algorithm>
-#include <queue>
 
 #define ll long long
-#define INF 0x7fffffff
-#define MINF 0xffffffff
+#define INF 0x3f3f3f3f
+#define MINF 0xf3f3f3f3
 #define IPAIR pair<int,int>
-#define MOD 1000000007
-
 using namespace std;
 
 int main(void){
     cin.tie(nullptr) -> sync_with_stdio(false);
-    
+    int t;
+    cin>>t;
+    while(t--){
+        int l,r;
+        cin>>l>>r;
+        int diff=0,count=0;
+        while(l<=r){
+            l+=diff++;
+            if(l<=r) count++;
+        }
+        cout<<count<<endl;
+    }
     return 0;
 }
